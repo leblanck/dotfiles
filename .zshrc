@@ -19,6 +19,22 @@ plugins=(git extract macos)
 
 source $ZSH/oh-my-zsh.sh
 
+alias work="timer 10s && terminal-notifier -message 'Pomodoro'\
+            -title 'Work Timer is up! Break Time! 🥳'\
+            -appIcon '~/Pictures/Clock.png'\
+            -sound Crystal"
+
+alias break="timer 5m && terminal-notifier -message 'Pomodoro'\
+            -title 'Break is over! Back To Work... 😓'\
+            -appIcon '~/Pictures/Clock.icns'\
+            -sound Crystal"
+
+alias break-long="timer 10m && terminal-notifier -message 'Pomodoro'\
+            -title 'Break is over! Back To Work... 😓'\
+            -appIcon '~/Pictures/Clock.icns'\
+            -sound Crystal"
+
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
