@@ -18,7 +18,7 @@ plugins=(git extract macos)
 source $ZSH/oh-my-zsh.sh
 alias v="nvim"
 
-alias work="timer 10s && terminal-notifier -message 'Pomodoro'\
+alias work="timer 20m && terminal-notifier -message 'Pomodoro'\
             -title 'Work Timer is up! Break Time! 🥳'\
             -appIcon '~/Pictures/Clock.png'\
             -sound Crystal"
