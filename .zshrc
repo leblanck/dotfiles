@@ -13,7 +13,7 @@ export ZSH="/Users/$userName/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git extract macos)
+plugins=(git extract)
 
 source $ZSH/oh-my-zsh.sh
 alias v="nvim"
@@ -61,3 +61,4 @@ export PATH=/usr/local/go/bin:/opt/homebrew/bin:/Users/n1517117/.gem/ruby/3.0.0/
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+eval "$(starship init zsh)"
