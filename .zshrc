@@ -35,6 +35,7 @@ alias break-long="timer 10m && terminal-notifier -message 'Pomodoro'\
 alias v="nvim"
 alias keg="zsh ~/repos/keg/keg.sh"
 alias readme="glow README.md"
+alias howto="glow ~/howto.md"
 alias weather="curl -s wttr.in | head -n 7"
 
 # Preferred editor for local and remote sessions
