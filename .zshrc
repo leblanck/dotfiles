@@ -16,7 +16,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git extract)
 
 source $ZSH/oh-my-zsh.sh
-alias v="nvim"
 
 alias work="timer 20m && terminal-notifier -message 'Pomodoro'\
             -title 'Work Timer is up! Break Time! 🥳'\
@@ -33,6 +32,10 @@ alias break-long="timer 10m && terminal-notifier -message 'Pomodoro'\
             -appIcon '~/Pictures/Clock.icns'\
             -sound Crystal"
 
+alias v="nvim"
+alias keg="zsh ~/repos/keg/keg.sh"
+alias readme="glow README.md"
+alias weather="curl -s wttr.in | head -n 7"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
