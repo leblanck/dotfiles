@@ -1,34 +1,70 @@
 format = """\
-[](bg:#282828 fg:#282828)\
-[ ](bg:#282828 fg:#fe8019)\
-[](fg:#282828 bg:#928374)\
-$time\
-[](fg:#928374 bg:#458588)\
+[ ](fg:#fe8019)\
+$username\
+$hostname\
+$localip\
+$kubernetes\
 $directory\
-[](fg:#458588 bg:#98971a)\
 $git_branch\
-$git_status\
+$git_commit\
+$git_state\
 $git_metrics\
-[](fg:#98971a bg:#282828)\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$dotnet\
+$golang\
+$guix_shell\
+$helm\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$purescript\
+$python\
+$ruby\
+$rust\
+$swift\
+$terraform\
+$vagrant\
+$nix_shell\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$os\
+$container\
+$shell\
 $character\
 """
 
 [directory]
 format = "[ ﱮ $path ]($style)"
-style = "fg:#ebdbb2 bg:#458588"
 
 [git_branch]
 format = '[ $symbol$branch(:$remote_branch) ]($style)'
 symbol = "  "
-style = "fg:#1C3A5E bg:#98971a"
 
 [git_status]
-format = '[$all_status]($style)'
-style = "fg:#98971a bg:#98971a"
+format = '[$all_status]($style) '
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
 
 [git_metrics]
-format = "([+$added]($added_style))[]($added_style)"
-added_style = "fg:#1C3A5E bg:#98971a"
+format = "([+$added]($added_style))"
 deleted_style = "fg:bright-red bg:235"
 disabled = false
 
@@ -37,8 +73,8 @@ format = "[ $symbol$branch ]($style)"
 symbol = " "
 
 [cmd_duration]
+disabled = false
 format = "[  $duration ]($style)"
-style = "fg:bright-white bg:18"
 
 [character]
 success_symbol = '[ ➜](bold green) '
@@ -46,6 +82,12 @@ error_symbol = '[ ✗](#cc241d) '
 
 [time]
 disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#928374"
-format = '[[ 󱑍 $time ](bg:#928374 fg:#282828)]($style)'
+use_12hr = true
+
+[localip]
+ssh_only = false
+format = '@ [$localipv4](bold blue) '
+disabled = false
+
+[line_break]
+disabled = true
