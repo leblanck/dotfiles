@@ -24,9 +24,15 @@ alias break-long="timer 10m && terminal-notifier -message 'Pomodoro'\
             -sound Crystal"
 
 alias v="nvim"
+alias e="exit"
+alias py="python3"
+alias ls="eza --color=auto --long --git --icons=always"
 alias keg="zsh ~/repos/keg/keg.sh"
 alias readme="glow README.md"
 alias howto="glow ~/howto.md"
+alias clr="clear"
+alias repos="cd ~/repos"
+alias dflip="sudo /Users/kleblanc/dns-flip.sh"
 alias weather="curl -s wttr.in | head -n 7"
 
 # Preferred editor for local and remote sessions
