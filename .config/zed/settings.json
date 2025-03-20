@@ -8,9 +8,9 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "icon_theme": "Material Icon Theme",
-  "ui_font_size": 16
+  "ui_font_size": 16,
   "buffer_font_size": 16,
-  "theme": "Oscura"
+  "theme": "Oscura",
   "auto_update": false,
   "git_gutter": "tracked_files"
 }
