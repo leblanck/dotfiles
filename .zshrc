@@ -25,6 +25,7 @@ alias break-long="timer 10m && terminal-notifier -message 'Pomodoro'\
 
 alias v="nvim"
 alias e="exit"
+alias z="zed $1"
 alias py="python3"
 alias ls="eza --color=auto --long --git --icons=always"
 alias keg="zsh ~/repos/keg/keg.sh"
